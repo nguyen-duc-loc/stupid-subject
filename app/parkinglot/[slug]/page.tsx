@@ -34,7 +34,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   }
 
   return (
-    <main className="container mx-auto px-6 xl:px-18 py-20 grid grid-cols-2 xl:grid-cols-3 xl:gap-x-6 gap-y-6">
+    <main className="container mx-auto px-12 xl:px-18 py-20 grid grid-cols-2 xl:grid-cols-3 xl:gap-x-6 gap-y-6">
       <Header />
       <Information parkingLot={parkingLot} />
       <Detail parkingLot={parkingLot} />
