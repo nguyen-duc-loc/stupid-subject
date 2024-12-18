@@ -1,7 +1,7 @@
 import React from "react";
 
 import { getParkingLots } from "@/actions/parking";
-import { Card, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Content from "./Content";
 
 const ParkingLots = async () => {

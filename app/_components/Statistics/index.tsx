@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import ValueCountUp from "../ValueCountUp";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import ValueCountUp from "@/components/ValueCountUp";
 import { cn } from "@/lib/utils";
 import { getStatistics } from "@/actions/parking";
 

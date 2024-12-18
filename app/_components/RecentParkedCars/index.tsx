@@ -9,8 +9,8 @@ import {
   TableBody,
   TableCell,
   Table,
-} from "../ui/table";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+} from "@/components/ui/table";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getHistory } from "@/actions/parking";
 import TimeDiff from "./TimeDiff";
 
@@ -27,26 +27,24 @@ const RecentParkedCars = async () => {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="text-center capitalize">
-                  License plate
-                </TableHead>
-                <TableHead className="text-center capitalize">
-                  Parking lot
-                </TableHead>
-                <TableHead className="text-center">Time</TableHead>
+                <TableHead>License plate</TableHead>
+                <TableHead>Parking lot</TableHead>
+                <TableHead>Time</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {history.map(({ licensePlate, parkingLot, time }) => (
+              {history.map(({ licensePlate, parkingLot, startTime }) => (
                 <TableRow key={licensePlate}>
-                  <TableCell className="text-center">{licensePlate}</TableCell>
-                  <TableCell className="text-center">
+                  <TableCell className="font-semibold">
+                    {licensePlate}
+                  </TableCell>
+                  <TableCell>
                     <Link href={`/parkinglot/${slug(parkingLot)}`}>
                       {parkingLot}
                     </Link>
                   </TableCell>
-                  <TableCell className="text-center">
-                    <TimeDiff time={time} />
+                  <TableCell className="w-28 sm:w-44">
+                    <TimeDiff time={startTime} />
                   </TableCell>
                 </TableRow>
               ))}

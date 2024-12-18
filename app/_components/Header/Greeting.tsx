@@ -8,7 +8,7 @@ const Greeting = async () => {
   return (
     <section className="mb-8 sm:mb-0">
       <h1 className="font-semibold text-3xl tracking-tight flex gap-4 items-end mb-2">
-        Welcome, {computerName}
+        Welcome, {computerName[0].toUpperCase() + computerName.slice(1)}
         <Image src="/logo.png" width={42} height={42} alt="Logo" />
       </h1>
       <p className="text-muted-foreground text-sm">

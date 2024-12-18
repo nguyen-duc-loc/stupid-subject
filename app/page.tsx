@@ -1,15 +1,15 @@
 import React from "react";
 
-import Forecast from "@/components/Forecast";
-import ParkingLots from "@/components/ParkingLots";
-import Map from "@/components/Map";
-import RecentParkedCars from "@/components/RecentParkedCars";
-import Statistics from "@/components/Statistics";
-import Header from "@/components/Header";
+import Forecast from "@/app/_components/Forecast";
+import ParkingLots from "@/app/_components/ParkingLots";
+import Map from "@/app/_components/Map";
+import RecentParkedCars from "@/app/_components/RecentParkedCars";
+import Statistics from "@/app/_components/Statistics";
+import Header from "@/app/_components/Header";
 
 const page = () => {
   return (
-    <>
+    <main className="container mx-auto px-6 xl:px-20 py-20 ">
       <Header />
       <div className="space-y-8">
         <Statistics />
@@ -22,7 +22,7 @@ const page = () => {
           <Map />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

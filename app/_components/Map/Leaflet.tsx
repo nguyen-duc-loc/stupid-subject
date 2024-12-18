@@ -8,11 +8,7 @@ const DynamicLeaflet = dynamic(() => import("./DynamicLeaflet"), {
 });
 
 const Leaflet = ({ parkingLots }: { parkingLots: ParkingLot[] }) => {
-  return (
-    <section className="col-span-7">
-      <DynamicLeaflet parkingLots={parkingLots} />
-    </section>
-  );
+  return <DynamicLeaflet parkingLots={parkingLots} />;
 };
 
 export default Leaflet;

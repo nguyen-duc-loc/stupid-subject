@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import slug from "slug";
 
-import { Card, CardContent } from "../ui/card";
-import { Badge } from "../ui/badge";
-import { ScrollArea } from "../ui/scroll-area";
-import { Input } from "../ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -15,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "@/components/ui/select";
 import { statuses } from "@/constants";
 
 const Content = ({ parkingLots }: { parkingLots: ParkingLot[] }) => {
@@ -64,9 +64,9 @@ const Content = ({ parkingLots }: { parkingLots: ParkingLot[] }) => {
           </SelectContent>
         </Select>
       </div>
-      <ScrollArea className="h-full">
+      <ScrollArea>
         {parkingLots.map(({ name, status }) => (
-          <Card key={name} className="mb-3 last:mb-0">
+          <Card key={name} className="mb-3 shadow-sm">
             <CardContent className="px-4 py-3">
               <Link
                 href={`/parkinglot/${slug(name)}`}
@@ -76,12 +76,11 @@ const Content = ({ parkingLots }: { parkingLots: ParkingLot[] }) => {
                 {name}
                 <div className="w-[100px] text-center">
                   <Badge
-                    className={`rounded-sm text-sm capitalize hover:bg-currentColor dark:bg-transparent dark:border-[1px] dark:border-current
-                        ${
-                          status === "available"
-                            ? "bg-green-600 dark:text-green-600"
-                            : "bg-red-600 dark:text-red-600"
-                        }`}
+                    className={`${
+                      status === "available"
+                        ? "bg-green-600 dark:text-green-600"
+                        : "bg-red-600 dark:text-red-600"
+                    }`}
                   >
                     {status}
                   </Badge>

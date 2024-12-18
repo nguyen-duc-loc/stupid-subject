@@ -7,7 +7,7 @@ const ValueCountUp = ({
   value,
   prefix = "",
 }: {
-  value: string;
+  value: string | number;
   prefix?: string;
 }) => {
   return (
