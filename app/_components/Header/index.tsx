@@ -1,13 +1,13 @@
 import React from "react";
 
 import Greeting from "./Greeting";
-import { ModeToggle } from "../../../components/ModeToggle";
+import ThemeConfig from "@/components/ThemeConfig";
 
 const Header = () => {
   return (
     <header className="sm:flex justify-between mb-12">
       <Greeting />
-      <ModeToggle />
+      <ThemeConfig />
     </header>
   );
 };

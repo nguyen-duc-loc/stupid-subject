@@ -29,7 +29,7 @@ const Information = ({ parkingLot }: { parkingLot: ParkingLot }) => {
       name: "Name",
       value: name,
       icon: IdCard,
-      iconClasses: "text-stone-950",
+      iconClasses: "text-foreground",
     },
     {
       name: "Phone",
@@ -97,7 +97,7 @@ const Information = ({ parkingLot }: { parkingLot: ParkingLot }) => {
   return (
     <div className="col-span-2 xl:border-r-2 xl:pr-6 xl:col-span-1">
       <Card className="overflow-hidden">
-        <CardHeader className="h-60 xl:h-40 relative border-b overflow-hidden bg-background dark">
+        <CardHeader className="h-60 xl:h-40 relative border-b overflow-hidden bg-transparent dark">
           <Background number={30} />
         </CardHeader>
         <CardContent className="relative pt-20 pb-8 px-12">

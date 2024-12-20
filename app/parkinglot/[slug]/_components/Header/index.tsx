@@ -1,13 +1,13 @@
 import React from "react";
 
 import BackButton from "./BackButton";
-import { ModeToggle } from "@/components/ModeToggle";
+import ThemeConfig from "@/components/ThemeConfig";
 
 const Header = () => {
   return (
-    <header className="col-span-full flex justify-between">
+    <header className="col-span-full flex flex-wrap gap-4 justify-between">
       <BackButton />
-      <ModeToggle />
+      <ThemeConfig />
     </header>
   );
 };
