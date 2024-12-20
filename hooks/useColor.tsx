@@ -39,16 +39,17 @@ export function ColorProvider({
   storageKey = "color",
   ...props
 }: ColorProviderProps) {
-  const [color, setColor] = useState<Color>(
-    () => (localStorage.getItem(storageKey) as Color) || defaultColor
-  );
+  const [color, setColor] = useState<Color>(defaultColor);
 
   useEffect(() => {
+    const currentColor = (localStorage.getItem("color") as Color) || color;
+    setColor(currentColor);
+
     const body = window.document.querySelector("body")!;
 
     body.classList.remove(...AvailableColors.map((color) => `theme-${color}`));
 
-    body.classList.add(`theme-${color}`);
+    body.classList.add(`theme-${currentColor}`);
   }, [color]);
 
   const value = {
